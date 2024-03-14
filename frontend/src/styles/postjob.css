@@ -1,0 +1,99 @@
+/* Reset some default styles */
+body, h1, h2, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.postjob-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.left,.right{
+    height: 100%;
+    flex: 1;
+}
+/* .left img{ */
+.postjob-img{
+    width:100%;
+    height:85vh;
+    /* height: 100%; */
+    opacity: 0.7;
+}
+.postjob-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    object-fit: cover;
+    box-sizing: border-box;
+    background-color: #3313be;
+    /* This will make the content area expand to fill the available space */
+}
+.post-form {
+    width: 100%;
+    /* background-color:darkblue; */
+    padding: auto;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.post-form input, .post-form textarea {
+    /* width: 100%; */
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    /* border: 1px solid #ccc; */
+    border-radius: 3px;
+    background: transparent;
+    display: block;
+    border: none;
+    box-shadow: 2p 2px 3px 3px rgba(0, 0, 0, 0.3);
+    /* border-bottom: 1px solid rgba(0,0,0,0.4); */
+}
+.post-form h2{
+    color: white;
+    text-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.6);
+    margin-bottom: 7px;
+}
+.post-form div{
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.4);
+    border-radius: 4px;
+}
+.post-form input,
+.post-form textarea{
+    color:white;
+}
+.post-form input::placeholder,.post-form textarea::placeholder{
+    color: white;
+}
+.post-form textarea {
+    resize: vertical;
+}
+
+.post-form button {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    background-color: #221269;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.post-form button:hover {
+    background-color: #ff9900;
+}
+
+.postjob-footer {
+    width: 100vw;
+    text-align: center;
+    padding: 1rem;
+    background-color: #0a032e;
+    color: #fff;
+    position: absolute;
+    bottom: -50px;
+}
