@@ -31,35 +31,27 @@ input[type="file"] {
 } */
 .updateResume{
     height: 100vh;
-    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
-    /* flex-direction: ;
-    justify-content: center;
-    align-items: center; */
 }
 .resumeSection{
     width:100vw;
     display: flex;
     flex:1;
-    /* background-color: red; */
     background-color: rgb(63, 55, 55);
-    /* background-color: #BB8C5D; */
+    background-color: white;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 .update-form {
-    /* background-color: rosybrown; */
-    color: #fff;
+    color: black;
     width: 100vw;
     padding: 2rem;
     border-radius: 5px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 .update-form h2{
     text-align: center;
-    text-shadow: 7px 5px  5px rgba(0, 0, 0, 0.7);
+    color: black;
 }
 
 .update-form form{
@@ -70,33 +62,7 @@ input[type="file"] {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    /* text-align: center; */
 }
-
-/* .update-form form label {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-} */
-
-/* .update-form a{
-    margin-top: 100px;
-} */
-/* input[type="file"] {
-    display: block;
-    margin-bottom: 1rem;
-} */
-
-/* .resume button {
-    display: block;
-    padding: 0.5rem;
-    background-color: #0d0e7c;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-} */
 
 .update-form .buildCheck {
     display: flex;
@@ -105,8 +71,15 @@ input[type="file"] {
     padding:20px;
 }
 .buildCheck a{
-    /* padding:20px; */
     margin: 0px 20px;
+    background-color: lightcyan;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buildCheck a:hover{
+    color:gray;
 }
 
 .update-form  a {
@@ -118,15 +91,13 @@ input[type="file"] {
 }
 
 
-/* Apply styles to the container */
 .update-form div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Add some spacing from the top */
+    margin-top: 20px;
   }
   
-  /* Apply styles to the label */
 .update-form form div  label i{
     padding: 5px;
 
@@ -134,11 +105,9 @@ input[type="file"] {
 .update-form form div  label {
     font-size: 20px;
     font-weight: 600;
-    /* box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.6); */
-    margin-bottom: 10px; /* Add some spacing below the label */
+    margin-bottom: 10px; 
   }
   
-  /* Apply styles to the file input */
 .update-form form div input[type="file"] {
     padding: 10px;
     border: 1px solid #ccc;
@@ -147,7 +116,6 @@ input[type="file"] {
     margin: 10px 0px;
   }
   
-  /* Optional: Style on hover for the file input */
 .update-form form div input[type="file"]:hover {
     background-color: #f0f0f0;
   }

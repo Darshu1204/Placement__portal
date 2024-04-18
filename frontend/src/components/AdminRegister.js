@@ -62,7 +62,7 @@ const AdminRegister = () => {
               <h2>Administrator Registration </h2>
               <form >
                   <div className="fullname">
-                      <label>Full Name:</label>
+                      {/* <label>Full Name:</label> */}
                       <input
                           type="text"
                           name="firstName"
@@ -82,7 +82,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Email Address:</label>
+                      {/* <label>Email Address:</label> */}
                       <input
                           type="email"
                           name="aemail"
@@ -94,7 +94,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Username:</label>
+                      {/* <label>Username:</label> */}
                       <input
                           type="text"
                           name="username"
@@ -106,7 +106,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Password:</label>
+                      {/* <label>Password:</label> */}
                       <input
                           type="password"
                           name="password"
@@ -118,7 +118,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Confirm Password:</label>
+                      {/* <label>Confirm Password:</label> */}
                       <input
                           type="password"
                           name="confirmPassword"
@@ -130,7 +130,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Phone Number:</label>
+                      {/* <label>Phone Number:</label> */}
                       <input
                           type="tel"
                           name="phoneNumber"
@@ -141,7 +141,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Role/Position:</label>
+                      {/* <label>Role/Position:</label> */}
                       <input
                           type="text"
                           name="role"
@@ -152,7 +152,7 @@ const AdminRegister = () => {
                   </div>
 
                   <div>
-                      <label>Department:</label>
+                      {/* <label>Department:</label> */}
                       <input
                           type="text"
                           name="department"

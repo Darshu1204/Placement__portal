@@ -17,6 +17,7 @@ import StudentRegister from './components/StudentRegister';
 import Company from './components/Company';
 import Profile from './components/Profile';
 import AppliedJob from './components/AppliedJob';
+import AddEvents from './components/AddEvents'
 function App() {
   const[loggedin,setLoggedin]=useState(false);
   const Slogged=()=>{
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/admin/register" element={<AdminRegister />} />
           <Route exact path="/student/register" isloggedin={loggedin} element={<StudentRegister />} />
           <Route exact path="/admin/login" element={<AdminLogin />} />
+          <Route exact path="/admin/events" element={<AddEvents />} />
           <Route exact path="/student/login" isloggedin={loggedin} element={<StudentLogin />} />
           {/* <Route exact path="/ApplicationStatus" element={<ApplicationStatus />} /> */}
           <Route exact path="/student/viewjob" element={<Viewjobs />} />

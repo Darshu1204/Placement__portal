@@ -63,6 +63,8 @@
 // // </html>
 import React, { useState } from 'react';
 import axios from "axios";
+import Adminnav from './Adminnav';
+import '../styles/company.css'
 function AddCompany() {
   const [companyData, setCompanyData] = useState({
     name: '',
@@ -73,11 +75,9 @@ function AddCompany() {
     contactEmail: '',
     contactPhone: '',
   });
-  const handleChange=async(e)=>{
-    e.preventDefault();
-    const field=e.target.name;
-    const value=e.target.value;
-    setCompanyData({...companyData,[field]:value})
+  const handleChange =(e) => {
+    const {name,value}=e.target;
+    setCompanyData({ ...companyData, [name]: value })
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -89,20 +89,20 @@ function AddCompany() {
         location,
         website,
         contactEmail,
-        contactPhone }={companyData};
+        contactPhone } = { companyData };
       const response = await axios.post('/company', {
         // method: 'POST',
         // headers: {
         //   'Content-Type': 'application/json',
         // },
         // body: JSON.stringify(companyData),
-          name,
-          description,
-          industry,
-          location,
-          website,
-          contactEmail,
-          contactPhone
+        name,
+        description,
+        industry,
+        location,
+        website,
+        contactEmail,
+        contactPhone
       });
       if (response.status === 201) {
         // Company added successfully
@@ -117,37 +117,73 @@ function AddCompany() {
     }
   };
   return (
-    <div className='company-container'>
-      <h2>Add a Company</h2>
-      <form>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={companyData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Description:</label>
-          <textarea
-            value={companyData.description}
-            onChange={handleChange}
-          />
-        </div>
-        {/* Add more fields for industry, location, website, contactEmail, and contactPhone */}
-        <div>
-          <label>Industry:</label>
-          <input
-            type="text"
-            value={companyData.industry}
-            onChange={handleChange}
-          />
-        </div>
-        {/* Repeat similar blocks for other fields */}
-        <button type="submit">Add</button>
-      </form>
-    </div>
+    <>
+      <Adminnav />
+      <div className='company-container' >
+        <h2>Add a Company</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              name='name'
+              value={companyData.name}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>Description:</label>
+            <textarea
+              name='description'
+              value={companyData.description}
+              onChange={handleChange}
+            />
+          </div>
+          {/* Add more fields for industry, location, website, contactEmail, and contactPhone */}
+          <div>
+            <label>Industry:</label>
+            <input
+              type="text"
+              name='industry'
+              value={companyData.industry}
+              onChange={handleChange}
+            />
+          </div>
+          
+          <div>
+            <label>Website:</label>
+            <input
+              type="text"
+              name="website"
+              value={companyData.website}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>Contact Email:</label>
+            <input
+              type="email"
+              name="contactEmail"
+              value={companyData.contactEmail}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>Contact Phone:</label>
+            <input
+              type="text"
+              name="contactPhone"
+              value={companyData.contactPhone}
+              onChange={handleChange}
+            />
+          </div>
+          {/* Repeat similar blocks for other fields */}
+          {/* <div className='submitBtn'> */}
+            <button type="submit">Add</button>
+          {/* </div> */}
+        </form>
+      </div>
+    </>
   );
 }
 

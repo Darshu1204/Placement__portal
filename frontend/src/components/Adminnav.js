@@ -9,6 +9,7 @@ const Adminnav = (props) => {
             <nav className='anav'>
                 <ul>
                     <li><Link to="/admin" >Dashboard</Link></li>
+                    <li><Link to="/admin/events" >Add Event</Link></li>
                     <li><Link to="/admin/company" >Add Company</Link></li>
                     <li><Link to="/admin/viewApplicant">View Applicant</Link></li>
                     <li><Link to="/admin/postjob">Post Job </Link></li>

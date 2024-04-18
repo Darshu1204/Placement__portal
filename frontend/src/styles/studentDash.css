@@ -1,4 +1,14 @@
 /* Styles for EventsAndWorkshops component */
+.adminDashboard{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d4');
+}
+
+
 .events-container {
     margin: 1.5rem 1rem;
 }

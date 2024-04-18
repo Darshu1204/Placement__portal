@@ -5,17 +5,17 @@ dotenv.config({ path: './config.env' });
 const mongoUrl = process.env.mongoUrl;
 // const mongoUrl='mongodb+srv://guptayogesh:0aPNS9sUFwOLGXsP@registeration.hdgongd.mongodb.net/test';
 
-const connectToMongo =async()=> {
+const connectToMongo = async () => {
     // mongoose.connect(mongoUrl,()=>{
     //     console.log("Connected To the database");
     // }  //show error
-    try{
+    try {
 
         await mongoose.connect("mongodb://localhost:27017/Placement1").then(() => {
             console.log('Connected to MongoDB');
         }).catch(err => console.error('Error connecting to MongoDB:', err));
-    }catch(err){
-        console.log("database Connection :"+err);
+    } catch (err) {
+        console.log("database Connection :" + err);
     }
 }
 

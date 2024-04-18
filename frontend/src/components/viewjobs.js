@@ -100,15 +100,6 @@ const ViewJobOpportunity = () => {
                 <div className="card-holder">
                 {jobs.map((job,index)=>(<div className="viewjob-card " >
                     <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger " style={{ left: '90%', zIndex: '1' }}></span>
-                    {/* <img src={imageUrl} className="card-img-top" alt="..." /> */}
-                    {/* <div className="card-content " >
-                        <h5 className="card-heading"> Job Title:{job.jobTitle}</h5>
-                        <p className="card-text"> Company:{job.company}</p>
-                        <p className="card-text"> Location:{job.location}</p>
-                        <p className="card-text m-2"> Description:{job.jobDescription}</p>
-                        <button className='appliedjobBtn' onClick={applyfunc(index)}>Apply </button>
-                    </div> */}
-                    {/* ind={index} jobId={job._id} */}
                     <div key={index}>
                         <Jobcard title={job.jobTitle} company={job.company} location={job.location} description={job.jobDescription} apply={()=>applyfunc(job._id)} />
                     </div>

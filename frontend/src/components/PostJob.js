@@ -20,6 +20,10 @@ const PostJobOpportunity = () => {
     const navigate=useNavigate();
     const handleSubmit=async(e)=>{
         e.preventDefault();
+        if (!postjob.jobTitle || !postjob.company || !postjob.location || !postjob.jobDescription) {
+            window.alert('Please fill in all required fields');
+            return;
+        }
         try{
             const{ jobTitle,company,location,jobDescription}=postjob;
             const response=await axios.post('http://localhost:5000/admin/postjob',{
@@ -31,8 +35,10 @@ const PostJobOpportunity = () => {
                 window.alert('Error posting job');
             } else {
                 window.alert('Job posted successfully');
-                navigate('/viewjobs'); // Redirect to the view jobs page
+                // navigate('/admin'); // Redirect to the view jobs page
             }
+            setPostjob({jobTitle: "",company: "",location: "",jobDescription: ""})
+
         } catch (err) {
             console.error('Error occurred:', err);
         }
@@ -55,9 +61,9 @@ const PostJobOpportunity = () => {
         <Adminnav className="postjob-nav" heading="Post Job"/>
         <div className="postjob-content">
 
-        {/* <div className="left">
+        <div className="left">
             <img className="postjob-img" src={hiringimg} alt="" />
-        </div> */}
+        </div>
         <main className='right'>
                 <section className="post-form">
                     <h2>Post Job Opportunity</h2>
