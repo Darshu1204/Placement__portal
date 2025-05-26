@@ -12,7 +12,7 @@ const ApplicationStatus = () => {
         // Fetch the list of posted jobs from your server when the component mounts
         async function appliedJobfunc() {
             try {
-                const response = await axios.get(`http://localhost:5000/student/getAppliedJob/${studentId}`);
+                const response = await axios.get(`https://placement-portal-4wsp.onrender.com/student/getAppliedJob/${studentId}`);
                 setAppliedJob(response.data);
                 console.log(appliedJob);
             } catch (error) {

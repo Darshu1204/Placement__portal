@@ -25,7 +25,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     async function allEvents() {
       try {
-        const response = await axios.get(`http://localhost:5000/admin/events`);
+        const response = await axios.get(`https://placement-portal-4wsp.onrender.com/admin/events`);
         setEvents(response.data);
         console.log(events);
       } catch (error) {
@@ -40,8 +40,8 @@ const AdminDashboard = () => {
   }, [events])
 
   const deleteEvent = async (eventId) => {
-    await axios.delete(`http://localhost:5000/admin/events/${eventId}`);
-    const response = await axios.get('http://localhost:5000/admin/events');
+    await axios.delete(`https://placement-portal-4wsp.onrender.com/admin/events/${eventId}`);
+    const response = await axios.get('https://placement-portal-4wsp.onrender.com/admin/events');
     const updatedEvents = response.data;
     setEvents(updatedEvents);
     // Update the state with the filtered events

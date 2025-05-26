@@ -32,7 +32,7 @@ const StudentRegister = () => {
 
         try {
             const { name, email, phone, password, gender, dob, department, year,cgpa, address } = student;
-            const response = await axios.post('http://localhost:5000/student/register', {
+            const response = await axios.post('https://placement-portal-4wsp.onrender.com/student/register', {
                 name,
                 email,
                 phone,

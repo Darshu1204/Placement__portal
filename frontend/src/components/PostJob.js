@@ -26,7 +26,7 @@ const PostJobOpportunity = () => {
         }
         try{
             const{ jobTitle,company,location,jobDescription}=postjob;
-            const response=await axios.post('http://localhost:5000/admin/postjob',{
+            const response=await axios.post('https://placement-portal-4wsp.onrender.com/admin/postjob',{
                 jobTitle, company, location, jobDescription
             });
             console.log("post1");

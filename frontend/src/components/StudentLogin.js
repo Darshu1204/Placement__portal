@@ -14,7 +14,7 @@ const Studentlogin = (props) => {
         e.preventDefault();
         // console.log("Post");
         try {
-            const response = await axios.post('http://localhost:5000/student/login', {
+            const response = await axios.post('https://placement-portal-4wsp.onrender.com/student/login', {
                 email,
                 password
             });

@@ -19,7 +19,7 @@ const AddEvents = () => {
             console.log(eventName,eventDate,eventLocation)
 
             const formattedDate = formatDate(eventDate);
-            const response = await axios.post('http://localhost:5000/admin/events', {
+            const response = await axios.post('https://placement-portal-4wsp.onrender.com/admin/events', {
                 EventName: eventName,
                 EventDate: formattedDate,
                 EventLocation: eventLocation

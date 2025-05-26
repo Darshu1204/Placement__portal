@@ -12,7 +12,7 @@ const Admin = () => {
         e.preventDefault();
         console.log("Post");
         try {
-            const response = await axios.post('http://localhost:5000/admin/login', {
+            const response = await axios.post('https://placement-portal-4wsp.onrender.com/admin/login', {
                 aemail,
                 password
             });

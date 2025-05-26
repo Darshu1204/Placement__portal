@@ -68,7 +68,7 @@ const ViewJobOpportunity = () => {
         // Fetch the list of posted jobs from your server when the component mounts
         async function fetchJobs() {
             try {
-                const response = await axios.get('http://localhost:5000/student/viewjob');
+                const response = await axios.get('https://placement-portal-4wsp.onrender.com/student/viewjob');
                 setJobs(response.data);
             } catch (error) {
                 console.error('Error fetching jobs:', error);
@@ -81,7 +81,7 @@ const ViewJobOpportunity = () => {
         // console.log(jobId);
         // console.log(studentId);
         try{
-            await axios.post(`http://localhost:5000/student/appliedJob/${studentId}`,{jobId}).then(()=>{
+            await axios.post(`https://placement-portal-4wsp.onrender.com/student/appliedJob/${studentId}`,{jobId}).then(()=>{
                 toast.success("Apllied Successfully");
             });
         }

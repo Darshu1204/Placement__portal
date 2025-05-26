@@ -29,7 +29,7 @@ const AdminRegister = () => {
                 console.log("password and Confirm Password must be same");
                 window.alert("password and Confirm Password must be same");
             }
-            const response=await axios.post('http://localhost:5000/admin/register',{
+            const response=await axios.post('https://placement-portal-4wsp.onrender.com/admin/register',{
                 firstName,
                 lastName,
                 aemail,

@@ -69,7 +69,7 @@ const StudentProfile = () => {
 
   useEffect(() => {
     // Fetch student data from the backend when the component loads
-    axios.get('http://localhost:5000/student/profile')
+    axios.get('https://placement-portal-4wsp.onrender.com/student/profile')
       .then(response => {
         setStudent(response.data); // Assuming the backend returns the student's data
       })
@@ -84,7 +84,7 @@ const StudentProfile = () => {
 
   const handleUpdate = () => {
     // Send a PUT request to update student information
-    axios.put('http://localhost:5000/student/update', student)
+    axios.put('https://placement-portal-4wsp.onrender.com/student/update', student)
       .then(response => {
         console.log("Student information updated successfully");
         setIsEditing(false); // Turn off editing mode after successful update
