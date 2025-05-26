@@ -11,7 +11,7 @@ const connectToMongo = async () => {
     // }  //show error
     try {
 
-        await mongoose.connect("mongodb://localhost:27017/Placement1").then(() => {
+        await mongoose.connect(mongoUrl).then(() => {
             console.log('Connected to MongoDB');
         }).catch(err => console.error('Error connecting to MongoDB:', err));
     } catch (err) {
